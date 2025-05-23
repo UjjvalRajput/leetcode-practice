@@ -7,7 +7,7 @@ class Solution:
         for end in range(len(fruits)):
             fruit = fruits[end]
             basket[fruit] = basket.get(fruit, 0) + 1 # new entry or increment
-            while len(basket) > 2:
+            while len(basket) >= 3:
                 basket[fruits[start]] -= 1
                 if basket[fruits[start]] == 0:
                     del basket[fruits[start]]
